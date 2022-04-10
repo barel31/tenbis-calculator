@@ -24,8 +24,9 @@ function App() {
 
         const hours = timeEndDec - timeStartDec; // number of hours
 
-        let NoBonus = 5;
+        let NoBonus = 0;
         if (timeEndDec >= 15) {
+            NoBonus = 5;
             NoBonus *= timeEndDec - 15;
         }
         console.log(`bonus = ${NoBonus} => ${timeEndDec} - 15`);
