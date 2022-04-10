@@ -61,6 +61,16 @@ function App() {
     return (
         <div className='App'>
             <h1>{currentDay}</h1>
+            <label style={{ display: 'inline' }} htmlFor='saturdayCheckbox'>
+                Saturday bonus: (disabled){' '}
+            </label>
+            <input style={{ display: 'inline' }} type='checkbox' name='saturday' id='saturdayCheckbox' disabled />
+            <label style={{ display: 'inline' }} htmlFor='saturdayCheckbox'>
+                {'  '}
+                Rain Bonus: (disabled){' '}
+            </label>
+            <input style={{ display: 'inline' }} type='checkbox' name='rain' id='rainCheckbox' disabled />
+
             <label htmlFor='vehicle'>Vehicle: </label>
             <select name='vehicle' id='vehicle' onChange={(e) => setVehicle(e.target.value)}>
                 <option value='Motorcycle'>Motorcycle</option>
