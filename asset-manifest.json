@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tenbis-calculator/static/css/main.df9267c2.css",
-    "main.js": "/tenbis-calculator/static/js/main.d5b62f60.js",
+    "main.js": "/tenbis-calculator/static/js/main.9d27f26d.js",
     "static/js/787.af04e3e4.chunk.js": "/tenbis-calculator/static/js/787.af04e3e4.chunk.js",
     "index.html": "/tenbis-calculator/index.html",
     "main.df9267c2.css.map": "/tenbis-calculator/static/css/main.df9267c2.css.map",
-    "main.d5b62f60.js.map": "/tenbis-calculator/static/js/main.d5b62f60.js.map",
+    "main.9d27f26d.js.map": "/tenbis-calculator/static/js/main.9d27f26d.js.map",
     "787.af04e3e4.chunk.js.map": "/tenbis-calculator/static/js/787.af04e3e4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df9267c2.css",
-    "static/js/main.d5b62f60.js"
+    "static/js/main.9d27f26d.js"
   ]
 }
