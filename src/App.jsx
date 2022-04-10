@@ -12,32 +12,26 @@ function App() {
     const [deliverysEvening, setDeliverysEvening] = useState(0);
     const [tips, setTips] = useState(0);
 
-    const [wage, setWage] = useState(0);
+    const today = new Date();
+    const currentDay = today.toLocaleString('he-IL', { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' });
 
     const calc = () => {
-        var hour = 30;
-        hour += vehicle === 'Motorcycle' ? 15 : 10;
+        let hour = 30; // base
+        hour += vehicle === 'Motorcycle' ? 20 : 15; // vehicle bonus
 
-        const timeStartDec = hoursToDec(timeStart);
-        const timeEndDec = hoursToDec(timeEnd);
+        const timeStartDec = hoursToDec(timeStart); // start time
+        const timeEndDec = hoursToDec(timeEnd); // end time
 
-        const hours = timeEndDec - timeStartDec;
+        const hours = timeEndDec - timeStartDec; // number of hours
 
-        if (timeStartDec >= 10 && timeEndDec <= 15) {
-            hour += 5;
+        let NoBonus = 5;
+        if (timeEndDec >= 15) {
+            NoBonus *= timeEndDec - 15;
         }
-
-        const minutes = hours / 60;
-        for (var i = 0; i < minutes; i++) {
-            break;
-        }
-
-        var hoursDiff = Math.abs(timeStartDec - timeEndDec) * 60;
-        console.log('hoursDiff: ' + hoursDiff);
-
-
-        // for (var i = 0; i < timeStartDec*60; i++) {
-        // }
+        console.log(`bonus = ${NoBonus} => ${timeEndDec} - 15`);
+        // NoBonus *= hours;
+        // console.log(`bonus after multi = ${NoBonus}`);
+        const wage = hours * hour + (tips | 0) - NoBonus;
 
         return (
             <>
@@ -46,7 +40,7 @@ function App() {
                 <p>wage: {hours * hour}</p>
                 <p>dec start: {timeStartDec}</p>
                 <p>dec end: {timeEndDec}</p>
-                <p>wage: {hours * hour + (tips | 0)}</p>
+                <p>wage: {wage}</p>
             </>
         );
     };
@@ -74,6 +68,7 @@ function App() {
 
     return (
         <div className='App'>
+            <h1>{currentDay}</h1>
             <label htmlFor='vehicle'>Vehicle: </label>
             <select name='vehicle' id='vehicle' onChange={(e) => setVehicle(e.target.value)}>
                 <option value='Motorcycle'>Motorcycle</option>
