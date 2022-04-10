@@ -31,7 +31,7 @@ function App() {
         console.log(`bonus = ${NoBonus} => ${timeEndDec} - 15`);
         // NoBonus *= hours;
         // console.log(`bonus after multi = ${NoBonus}`);
-        const wage = hours * hour + (tips | 0) - NoBonus;
+        const wage = hours * hour + (tips | 0) - NoBonus + deliverysNoon * 8 + deliverysEvening * 5;
 
         return (
             <>
@@ -86,7 +86,7 @@ function App() {
             <label htmlFor='time_end'>Shift ends: </label>
             <input name='time_end' type='time' placeholder='Shift ends' onChange={(e) => setTimeEnd(e.target.value)} />
 
-            <label htmlFor='deliverys_noon'>Delivery peak noon: </label>
+            <label htmlFor='deliverys_noon'>Delivery peak noon: (11:30-13:30)</label>
             <input
                 name='deliverys_noon'
                 type='number'
