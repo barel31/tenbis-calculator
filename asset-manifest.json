@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/tenbis-calculator/static/css/main.df9267c2.css",
-    "main.js": "/tenbis-calculator/static/js/main.6e1b806f.js",
+    "main.js": "/tenbis-calculator/static/js/main.8ba82912.js",
     "index.html": "/tenbis-calculator/index.html",
     "main.df9267c2.css.map": "/tenbis-calculator/static/css/main.df9267c2.css.map",
-    "main.6e1b806f.js.map": "/tenbis-calculator/static/js/main.6e1b806f.js.map"
+    "main.8ba82912.js.map": "/tenbis-calculator/static/js/main.8ba82912.js.map"
   },
   "entrypoints": [
     "static/css/main.df9267c2.css",
-    "static/js/main.6e1b806f.js"
+    "static/js/main.8ba82912.js"
   ]
 }
