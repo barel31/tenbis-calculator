@@ -41,8 +41,6 @@ function App() {
         return (
             <>
                 <p>hours: {hours}</p>
-                <p>per hour: {hour}</p>
-                <p>wage: {hours * hour}</p>
                 <p>dec start: {timeStartDec}</p>
                 <p>dec end: {timeEndDec}</p>
                 <h3>wage: {wage}₪</h3>
