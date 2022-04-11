@@ -43,7 +43,7 @@ function App() {
                 <p>hours: {hours}</p>
                 <p>dec start: {timeStartDec}</p>
                 <p>dec end: {timeEndDec}</p>
-                <h3>wage: {wage}₪</h3>
+                <h3>wage: {wage.toFixed(2)}₪</h3>
             </>
         );
     };
